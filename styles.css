@@ -11,13 +11,31 @@ html {
     scroll-behavior: smooth;
 }
 
-h1 {
+h1, h2 {
     font-family: "DM Serif Display", serif;
 }
 
+h1 {
+    font-size: 48px;
+}
+
 header {
+    position: fixed;
+    width: 100%;
+    display: flex;
     background-color: #004357;
     border-bottom: 5px solid #EBF9FA;
+}
+
+.content-body {
+    padding-top: 100px;
+    padding-left: 450px;
+    padding-right: 450px;
+    padding-bottom: 50px;
+}
+
+.complimentary-text {
+    font-size: 24px;
 }
 
 .drop-down {
@@ -60,6 +78,12 @@ header {
 
 .drop-down-button {
     outline: none;
+}
+
+.hvl-logo {
+    width: 175px;
+    margin: 20px;
+    margin-left: 200px;
 }
 
 .hvl-logo:hover {
