@@ -44,8 +44,14 @@ header {
     color: #000;
 }
 
-.drop-down-content li a:hover {
+.drop-down-content li:hover {
     text-decoration: underline;
+    background-color: #CEF0F3;
+}
+
+.drop-down-content .current-page {
+    text-decoration: none !important;
+    background-color: #EBF9FA !important;
 }
 
 .drop-down:focus-within .drop-down-content {
