@@ -14,3 +14,48 @@ html {
 h1 {
     font-family: "DM Serif Display", serif;
 }
+
+header {
+    background-color: #004357;
+    border-bottom: 5px solid #EBF9FA;
+}
+
+.drop-down {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-down-content {
+    display: none;
+    position: absolute;
+    background-color: #EBF9FA;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.drop-down-content li {
+    padding: 12px 16px;
+    display: block;
+}
+
+.drop-down-content li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.drop-down-content li a:hover {
+    text-decoration: underline;
+}
+
+.drop-down:focus-within .drop-down-content {
+    display: block;
+}
+
+.drop-down-button {
+    outline: none;
+}
+
+.hvl-logo:hover {
+    cursor: pointer;
+}
