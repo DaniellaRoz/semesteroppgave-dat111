@@ -25,6 +25,7 @@ header {
     display: flex;
     background-color: #004357;
     border-bottom: 5px solid #EBF9FA;
+    z-index: 2;
 }
 
 .content-body {
@@ -78,6 +79,35 @@ header {
 
 .drop-down-button {
     outline: none;
+}
+
+.drop-down-box-content {
+    display: none;
+    position: absolute;
+    background-color: #EBF9FA;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.drop-down-box-content li {
+    padding: 12px 16px;
+    list-style-type: none;
+}
+
+.drop-down-box:focus-within .drop-down-box-content {
+    display: block;
+}
+
+.drop-down-box-header {
+    background-color: #004357;
+    color: #FFF;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    margin-bottom: 10px;
 }
 
 .hvl-logo {
