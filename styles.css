@@ -97,6 +97,10 @@ header {
     list-style-type: none;
 }
 
+.drop-down-box-content img {
+    max-width: 200px;
+}
+
 .drop-down-box:focus-within .drop-down-box-content {
     display: block;
 }
