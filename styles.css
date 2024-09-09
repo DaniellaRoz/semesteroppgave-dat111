@@ -30,9 +30,9 @@ header {
 
 .content-body {
     padding-top: 100px;
-    padding-left: 450px;
-    padding-right: 450px;
-    padding-bottom: 50px;
+    min-width: 400px;
+    max-width: 800px;
+    margin: auto;
 }
 
 .complimentary-text {
@@ -45,12 +45,23 @@ header {
 }
 
 .drop-down-content {
-    display: none;
     position: absolute;
+    top: 90px;
+    left: 0;
     background-color: #EBF9FA;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    min-width: 160px;
+    width: 170px;
+    opacity: 0;
+    transform: translateY(-10px);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drop-down-content.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .drop-down-content li {
@@ -78,7 +89,35 @@ header {
 }
 
 .drop-down-button {
+    border: none;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 170px;
+    text-align: right;
     outline: none;
+    background-color: #EBF9FA;
+    color: #000;
+    padding: 5px 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.drop-down-button img {
+    transition: transform 0.3s ease-out;
+}
+
+.drop-down-button.rotate {
+    border-top: #004357 solid 1px;
+}
+
+.drop-down-button.rotate img {
+    transform: rotate(180deg);
+}
+
+.drop-down-button:hover {
+    background-color: #CEF0F3;
+    cursor: pointer;
 }
 
 .drop-down-box-content {
@@ -117,7 +156,6 @@ header {
 .hvl-logo {
     width: 175px;
     margin: 20px;
-    margin-left: 200px;
 }
 
 .hvl-logo:hover {
