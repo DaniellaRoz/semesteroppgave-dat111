@@ -25,7 +25,7 @@ header {
     display: flex;
     background-color: #004357;
     border-bottom: 5px solid #EBF9FA;
-    z-index: 2;
+    z-index: 3;
 }
 
 .content-body {
