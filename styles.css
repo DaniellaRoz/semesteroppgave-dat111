@@ -28,6 +28,18 @@ header {
     z-index: 3;
 }
 
+table {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #CEF0F3;
+}
+
+td, th {
+    padding: 10px;
+}
+
 .content-body {
     padding-top: 100px;
     min-width: 400px;
