@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var toggled = false;
+    let toggled = false;
 
     const dropDownButton = document.querySelector(".drop-down-button");
     const dropDownContent = document.querySelector(".drop-down-content");
