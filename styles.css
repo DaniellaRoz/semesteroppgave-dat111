@@ -38,6 +38,7 @@ tr:nth-child(even) {
 
 td, th {
     padding: 10px;
+    cursor: default;
 }
 
 .content-body {
