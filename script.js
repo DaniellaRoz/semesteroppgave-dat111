@@ -1,3 +1,6 @@
+const table = document.getElementById("opening-times-table");
+
+
 document.addEventListener("DOMContentLoaded", function() {
     let toggled = false;
 
@@ -20,3 +23,37 @@ document.addEventListener("DOMContentLoaded", function() {
 
     adjustButtonPosition(); // For adjusting the position on page load
 });
+
+table.addEventListener("mousemove", (event) => {
+    const target = event.target;
+
+    if (target.tagName === "TD") {
+        const colIndex = target.cellIndex;
+        const row = target.parentElement;
+        const ths = table.querySelectorAll("thead th");
+        const leftmostTd = row.querySelector("td");
+
+        removeHighlight();
+
+        if (ths[colIndex]) {
+            ths[colIndex].classList.add("highlight");
+        }
+
+        if (leftmostTd) {
+            leftmostTd.classList.add("highlight");
+        }
+    }
+});
+
+table.addEventListener("mouseleave", () => {
+    removeHighlight();
+});
+
+function removeHighlight() {
+    const ths = table.querySelectorAll("th");
+    const tds = table.querySelectorAll("td");
+
+    ths.forEach(th => th.classList.remove("highlight"));
+    tds.forEach(td => td.classList.remove("highlight"));
+    
+}

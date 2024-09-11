@@ -33,13 +33,21 @@ table {
     border-collapse: collapse;
 }
 
-tr:nth-child(even) {
+tr:nth-child(odd) {
     background-color: #CEF0F3;
 }
 
 td, th {
     padding: 10px;
     cursor: default;
+}
+
+td:hover {
+    font-weight: bold;
+}
+
+.highlight {
+    color: #EE6352;
 }
 
 .content-body {
