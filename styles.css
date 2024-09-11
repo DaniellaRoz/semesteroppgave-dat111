@@ -42,8 +42,20 @@ td, th {
     cursor: default;
 }
 
+th {
+    border-bottom: 2px solid #004357;
+}
+
+td strong {
+    font-weight: 700 !important;
+}
+
 td:hover {
     font-weight: bold;
+}
+
+td:first-child, th:first-child {
+    border-right: 2px solid #004357;
 }
 
 .highlight {

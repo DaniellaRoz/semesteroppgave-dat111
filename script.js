@@ -35,12 +35,14 @@ table.addEventListener("mousemove", (event) => {
 
         removeHighlight();
 
-        if (ths[colIndex]) {
-            ths[colIndex].classList.add("highlight");
-        }
+        if (colIndex != 0) {
+            if (ths[colIndex]) {
+                ths[colIndex].classList.add("highlight");
+            }
 
-        if (leftmostTd) {
-            leftmostTd.classList.add("highlight");
+            if (leftmostTd) {
+                leftmostTd.classList.add("highlight");
+            }
         }
     }
 });
@@ -55,5 +57,4 @@ function removeHighlight() {
 
     ths.forEach(th => th.classList.remove("highlight"));
     tds.forEach(td => td.classList.remove("highlight"));
-    
 }
