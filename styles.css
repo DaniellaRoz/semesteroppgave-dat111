@@ -11,7 +11,7 @@ html {
     scroll-behavior: smooth;
 }
 
-h1, h2 {
+h1, h2, .drop-down-box-header {
     font-family: "DM Serif Display", serif;
 }
 
@@ -39,7 +39,7 @@ tr:nth-child(odd) {
 
 td, th {
     padding: 10px;
-    cursor: default;
+    cursor: crosshair;
 }
 
 th {
@@ -129,7 +129,7 @@ td:first-child, th:first-child {
     align-items: center;
     justify-content: space-between;
     right: 0;
-    top: 0;
+    top: 90px;
     width: 170px;
     text-align: right;
     outline: none;
@@ -146,6 +146,11 @@ td:first-child, th:first-child {
 
 .drop-down-button.rotate {
     border-top: #004357 solid 1px;
+    transform: none !important; /* This has to exist so I don't have to declare a .rotate state for every location button*/ 
+}
+
+.rotate {
+    transform: rotate(180deg);
 }
 
 .drop-down-button.rotate img {
@@ -157,15 +162,25 @@ td:first-child, th:first-child {
     cursor: pointer;
 }
 
+.drop-down-box {
+    position: relative;
+    width: 650px;
+    margin-bottom: 10px;
+}
+
 .drop-down-box-content {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #EBF9FA;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    min-width: 60%;
+    width: 100%;
+    border-radius: 5px;
     padding: 10px;
-    margin-bottom: 10px;
+}
+
+#bergen-content.show, #haugesund-content.show, #sogndal-content.show, #foerde-content.show, #stord-content.show {
+    display: block;
 }
 
 .drop-down-box-content li {
@@ -177,17 +192,24 @@ td:first-child, th:first-child {
     max-width: 200px;
 }
 
-.drop-down-box:focus-within .drop-down-box-content {
-    display: block;
-}
-
 .drop-down-box-header {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 28px;
     background-color: #004357;
     color: #FFF;
     border: none;
+    border-radius: 5px;
     outline: none;
-    padding: 5px 15px;
+    padding: 10px 30px;
     margin-bottom: 10px;
+}
+
+.drop-down-box-header img {
+    transition: transform 0.3s ease-out;
 }
 
 .hvl-logo {
