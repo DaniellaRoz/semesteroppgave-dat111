@@ -21,6 +21,7 @@ h1 {
 
 h2 {
     font-size: 36px;
+    scroll-margin-top: 100px;
 }
 
 header {
@@ -30,6 +31,7 @@ header {
     background-color: #004357;
     border-bottom: 5px solid #EBF9FA;
     z-index: 3;
+    align-items: center;
 }
 
 table {
@@ -38,7 +40,7 @@ table {
 }
 
 tr:nth-child(odd) {
-    background-color: #CEF0F3;
+    background-color: #EBF9FA;
 }
 
 td, th {
@@ -62,12 +64,38 @@ td:first-child, th:first-child {
     border-right: 2px solid #004357;
 }
 
+.internal-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: inherit;
+}
+
+.internal-nav li {
+    float: left;
+    list-style-type: none;
+}
+
+.internal-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.internal-nav li a:hover {
+    background-color: #001F29;
+}
+
 .highlight {
     color: #EE6352;
 }
 
 .content-body {
     padding-top: 100px;
+    padding-bottom: 50px;
     min-width: 400px;
     max-width: 800px;
     margin: auto;
