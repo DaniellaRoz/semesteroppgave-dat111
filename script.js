@@ -1,6 +1,5 @@
 const table = document.getElementById("opening-times-table");
 
-
 document.addEventListener("DOMContentLoaded", function() {
     let toggled = false;
 
@@ -60,8 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     stordButton.addEventListener("click", function() {
         stordContent.classList.toggle("show");
         document.querySelector("#stord-button img").classList.toggle("rotate");
-    })
-
+    });
     adjustButtonPosition(); // For adjusting the position on page load
 });
 

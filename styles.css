@@ -65,10 +65,9 @@ td:first-child, th:first-child {
 }
 
 .internal-nav ul {
+    display: flex;
+    margin-left: auto;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
     background-color: inherit;
 }
 
@@ -251,4 +250,39 @@ td:first-child, th:first-child {
 
 .hvl-logo:hover {
     cursor: pointer;
+}
+
+.log-in-and-register {
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.log-in-and-register li {
+    position: relative;
+    text-decoration: none;
+}
+
+.log-in-and-register li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.log-in-and-register li a:hover {
+    background-color: #001F29;
+}
+
+.text-field {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtext {
+    font-size: 10px;
+    margin-bottom: 20px;
 }

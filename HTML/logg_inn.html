@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="no">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
+        <title>Logg Inn - HvL</title>
+    </head>
+    <body>
+        <header>
+            <img class="hvl-logo" src="../media/hvl_logo.svg" alt="HvL sin logo" onclick="window.location.href='../index.html'">
+        </header>
+
+        <div class="content-body">
+            <form action="../index.html" method="post" id="form">
+                <div class="text-field">
+                    <label for="brukernavn-eller-epost">Brukernavn eller epost *</label>
+                    <input type="text" id="log-in-username-or-email" name="brukernavn-eller-epost" required maxlength="64" size="62">
+                </div>
+                
+                <div class="text-field">
+                    <label for="passord">Passord *</label>
+                    <input type="password" id="password" name="passord" required maxlength="64" size="62">
+                </div>
+
+                <div class="subtext">
+                    <p>* obligatorisk felt</p>
+                </div>
+
+                <button type="submit" class="logg-inn-or-register-button" id="log-in-button">Logg Inn</button>
+            </form>
+        </div>
+    </body>   
+</html>
