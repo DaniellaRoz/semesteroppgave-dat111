@@ -275,3 +275,14 @@ td:first-child, th:first-child {
 .log-in-and-register li a:hover {
     background-color: #001F29;
 }
+
+.text-field {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtext {
+    font-size: 10px;
+    margin-bottom: 20px;
+}
