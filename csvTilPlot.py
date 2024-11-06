@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 def main():
     # Bruk importerBesoekertall-funksjonen til å opprette en liste bestående av alle radene
     # i csv-filen og lagre denne i en variabel.
-    csvliste = importerBesoekertall('besoekertall.csv')
+    csvliste = importerBesoekertall('besoekerstatistikk.csv')
     
     # Henter ut timene Læringslab er åpent fra csvliste, konverterer verdiene til heltall og gjør de om til en liste.
     x = list(map(int, csvliste[0][1:]))
