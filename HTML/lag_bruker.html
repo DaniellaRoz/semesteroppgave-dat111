@@ -1,45 +1,149 @@
 <!DOCTYPE html>
-
 <html lang="no">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../styles.css">
         <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
         <title>Lag Bruker - HvL</title>
+        <style>
+            body {
+                font-size: 16px;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: #004357;
+                padding: 1rem;
+            }
+            .hvl-logo {
+                max-height: 80px;
+                width: auto;
+            }
+            main {
+                padding: 2rem;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            h1 {
+                margin-top: 1.5rem;
+                color: #333;
+                font-size: 24px;
+            }
+            .text-field {
+                margin-bottom: 1.5rem;
+            }
+            .text-field label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-size: 16px;
+            }
+            .text-field input {
+                font-size: 16px;
+                padding: 0.75rem;
+                min-width: 200px;
+                width: 100%;
+                max-width: 400px;
+            }
+            .logg-inn-or-register-button {
+                font-size: 16px;
+                padding: 0.75rem 1.5rem;
+                cursor: pointer;
+                min-height: 44px;
+            }
+            .subtext {
+                font-size: 16px;
+                color: #666;
+                margin: 1rem 0;
+            }
+            
+            p, span, button, input, label {
+                font-size: 16px;
+            }
+        </style>
     </head>
     <body>
         <header>
-            <img class="hvl-logo" src="../media/hvl_logo.svg" alt="HvL sin logo" onclick="window.location.href='../index.html'">
+            
+            <a href="../index.html">
+                <img 
+                    class="hvl-logo" 
+                    src="../media/hvl_logo.svg" 
+                    alt="HvL sin logo. Klikk for å gå til hovedsiden" 
+                >
+            </a>
         </header>
 
-        <div class="content-body">
+        <main class="content-body">
+            
+            <h1>Lag Bruker</h1>
             <form action="../index.html" method="post" id="registration-form">
                 <div class="text-field">
-                    <label for="username">Brukernavn *</label>
-                    <input type="text" id="username" name="brukernavn" required maxlength="64" size="62">
+                    <label for="username" class="form-label">
+                        Brukernavn <span aria-label="required">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="brukernavn" 
+                        required 
+                        maxlength="64"
+                        aria-required="true"
+                    >
                 </div>
                 
                 <div class="text-field">
-                    <label for="email">Epost</label>
-                    <input type="text" id="email" name="epost" maxlength="64" size="62">
+                    <label for="email" class="form-label">
+                        Epost
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="epost" 
+                        maxlength="64"
+                    >
                 </div>
 
                 <div class="text-field">
-                    <label for="password">Passord *</label>
-                    <input type="password" id="password" name="passord" required maxlength="64" size="62">
+                    <label for="password" class="form-label">
+                        Passord <span aria-label="required">*</span>
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="passord" 
+                        required 
+                        maxlength="64"
+                        aria-required="true"
+                    >
                 </div>
 
                 <div class="text-field">
-                    <label for="confirm-password">Bekreft Passord *</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required maxlength="64" size="62">
+                    <label for="confirm-password" class="form-label">
+                        Bekreft Passord <span aria-label="required">*</span>
+                    </label>
+                    <input 
+                        type="password" 
+                        id="confirm-password" 
+                        name="confirm-password" 
+                        required 
+                        maxlength="64"
+                        aria-required="true"
+                    >
                 </div>
 
-                <div class="subtext">
+                <div class="subtext" role="note">
                     <p>* obligatorisk felt</p>
                 </div>
 
-                <button type="submit" class="logg-inn-or-register-button" id="log-in-button">Lag Bruker</button>
+                <button 
+                    type="submit" 
+                    class="logg-inn-or-register-button" 
+                    id="log-in-button"
+                >
+                    Lag Bruker
+                </button>
             </form>
-        </div>
-    </body>   
+        </main>
+    </body>
 </html>
