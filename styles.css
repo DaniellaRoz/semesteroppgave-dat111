@@ -30,6 +30,7 @@ h2 {
 
 button {
     font-family: inherit;
+    cursor: pointer;
 }
 
 header {
@@ -202,7 +203,6 @@ td:first-child, th:first-child {
 
 .drop-down-button:hover {
     background-color: #CEF0F3;
-    cursor: pointer;
 }
 
 .drop-down-box {
@@ -314,6 +314,30 @@ td:first-child, th:first-child {
 
 .logg-inn-or-register-button {
     padding: 0.75rem 1.5rem;
-    cursor: pointer;
     min-height: 44px;
+}
+
+.graph-container {
+    margin: auto;
+    width: 80%;
+}
+
+#visitor-graph {
+    width: 100%;
+    height: auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-container button {
+    width: 100%;
+    height: 50px;
+}
+
+.button-container button.unclickable {
+    cursor: not-allowed;
+    background-color: #F5F5F5;
 }
