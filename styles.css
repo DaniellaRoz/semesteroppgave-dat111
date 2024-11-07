@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-    font-family: "Montserrat", sans-serif; /* Montserrat blir standard font for nettsiden utenom overskrifter. */
     box-sizing: border-box;
+}
+
+:where(*, *::before, *::after) {
     margin: 0;
     padding: 0;
 }
 
 html {
+    font-family: "Montserrat", sans-serif; /* Montserrat blir standard font for nettsiden utenom overskrifter. */
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
@@ -22,6 +26,10 @@ h1 {
 h2 {
     font-size: 36px;
     scroll-margin-top: 100px;
+}
+
+button {
+    font-family: inherit;
 }
 
 header {
@@ -280,9 +288,28 @@ td:first-child, th:first-child {
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.text-field input {
+    font-family: inherit;
+    padding: 0.75rem;
+    min-width: 200px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.text-field label {
+    font-size: 18px;
 }
 
 .subtext {
-    font-size: 10px;
-    margin-bottom: 20px;
+    margin: 1rem 0;
+    color: #666;
+}
+
+.logg-inn-or-register-button {
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    min-height: 44px;
 }
