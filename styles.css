@@ -108,6 +108,10 @@ td:first-child, th:first-child {
     margin: auto;
 }
 
+.content-body ul {
+    padding-left: 20px;
+}
+
 .complimentary-text {
     font-size: 24px;
 }
