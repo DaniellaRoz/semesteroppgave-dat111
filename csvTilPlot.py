@@ -30,7 +30,7 @@ def main():
         
         # Utfør et kall på anbefalteTidsrom-funksjonen med følgende argument: dag, liste over tidspunkt, 
         # liste over besøkende og grenseverdi.
-        anbefalteTidsrom(rad[0], x, y, 50)
+        anbefalteTidsrom(rad[0], x, y, 7)
         
         # Utfør et kall på plotGraf-funksjonen med verdiene for x- og y-aksen som argument, samt navnet på dagen.
         plotGraf(x, y, rad[0])
@@ -58,7 +58,7 @@ def importerBesoekertall(filnavn):
 def plotGraf(x, y, navn):
     
     # Opprett fire grenseverdier som spesifiserer lite, medium, høyt og veldig høyt besøkstall.
-    grenseverdier = [0, 20, 40, 60]
+    grenseverdier = [3, 6, 8, 10]
     
     # Spesifiserer fargene i plottet. Vi bruker listekomprehensjon som setter verdier basert på elementene i listen,
     # dvs. vi går gjennom alle verdiene i listen og setter de til en ny verdi basert på sannhetsuttrykk.

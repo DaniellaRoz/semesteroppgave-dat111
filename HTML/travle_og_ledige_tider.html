@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
+        <title>travle_og_ledige_tider - HvL</title>
+    </head>
+    <body>
+        <header>
+            <a href="../index.html">
+                <img class="hvl-logo" src="../media/hvl_logo.svg" alt="HvL sin logo">
+            </a>
+        
+            <ul class="log-in-and-register">
+                <li><a href="logg_inn.html">Logg Inn</a></li>
+                <li><a href="lag_bruker.html">Lag Bruker</a></li>
+            </ul>
+        </header>
+        <nav class="drop-down">
+            <button class="drop-down-button"><strong>Navigasjon</strong><img src="../media/drop_down_button_black.svg" alt="Vis/skjul navigasjonsmeny"></button>
+            <ul class="drop-down-content">
+                <li><a href="../index.html">Hjem</a></li>
+                <li><a href="om_laeringslabbene.html">Om læringslabbene</a></li>
+                <li><a href="loesninger_resultat_og_virkning.html">Løsninger, resultat og virkning</a></li>
+                <li><a href="baerekraft_og_samfunnsansvar.html">Bærekraft og samfunnsansvar</a></li>
+                <li><a href="kontakt.html">Kontakt og sammarbeid</a></li>
+                <li class="current-page"><strong>Travle og Ledige Tider</strong></li>
+            </ul>
+        </nav>
+
+        <ul class="log-in-and-register">
+            <li><a href="logg_inn.html">Logg Inn</a></li>
+            <li><a href="lag_bruker.html">Lag Bruker</a></li>
+        </ul>
+
+        <main class="content-body">
+            <div class="graph-container">
+                <img id="visitor-graph" src="../besokstall_Mandag.png" alt="graf over besøkstall på mandag">
+                <div class="button-container">
+                    <button id="monday-button" aria-label="Vis graf for mandag" aria-pressed="true">Mandag</button>
+                    <button id="tuesday-button" aria-label="Vis graf for tirsdag" aria-pressed="false">Tirsdag</button>
+                    <button id="wednesday-button" aria-label="Vis graf for onsdag" aria-pressed="false">Onsdag</button>
+                    <button id="thursday-button" aria-label="Vis graf for torsdag" aria-pressed="false">Torsdag</button>
+                    <button id="friday-button" aria-label="Vis graf for fredag" aria-pressed="false">Fredag</button>
+                </div>
+            </div>
+        </main>
+
+        <script src="../script.js"></script>
+    </body>
+</html>

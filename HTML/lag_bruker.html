@@ -1,45 +1,91 @@
 <!DOCTYPE html>
-
 <html lang="no">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../styles.css">
         <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
         <title>Lag Bruker - HvL</title>
     </head>
     <body>
         <header>
-            <img class="hvl-logo" src="../media/hvl_logo.svg" alt="HvL sin logo" onclick="window.location.href='../index.html'">
+            
+            <a href="../index.html">
+                <img 
+                    class="hvl-logo" 
+                    src="../media/hvl_logo.svg" 
+                    alt="HvL sin logo. Klikk for å gå til hovedsiden" 
+                >
+            </a>
         </header>
 
-        <div class="content-body">
+        <main class="content-body">
+            
+            <h1>Lag Bruker</h1>
             <form action="../index.html" method="post" id="registration-form">
                 <div class="text-field">
-                    <label for="brukernavn">Brukernavn *</label>
-                    <input type="text" id="username" name="brukernavn" required maxlength="64" size="62">
+                    <label for="username" class="form-label">
+                        Brukernavn *
+                    </label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="brukernavn" 
+                        required 
+                        maxlength="64"
+                    >
                 </div>
                 
                 <div class="text-field">
-                    <label for="epost">Epost</label>
-                    <input type="text" id="email" name="epost" maxlength="64" size="62">
+                    <label for="email" class="form-label">
+                        Epost
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="epost" 
+                        maxlength="64"
+                    >
                 </div>
 
                 <div class="text-field">
-                    <label for="passord">Passord *</label>
-                    <input type="password" id="password" name="passord" required maxlength="64" size="62">
+                    <label for="password" class="form-label">
+                        Passord *
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="passord" 
+                        required 
+                        maxlength="64"
+                    >
                 </div>
 
                 <div class="text-field">
-                    <label for="confirm-password">Bekreft Passord *</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required maxlength="64" size="62">
+                    <label for="confirm-password" class="form-label">
+                        Bekreft Passord *
+                    </label>
+                    <input 
+                        type="password" 
+                        id="confirm-password" 
+                        name="confirm-password" 
+                        required 
+                        maxlength="64"
+                    >
                 </div>
 
-                <div class="subtext">
+                <div class="subtext" role="note">
                     <p>* obligatorisk felt</p>
                 </div>
 
-                <button type="submit" class="logg-inn-or-register-button" id="log-in-button">Lag Bruker</button>
+                <button 
+                    type="submit" 
+                    class="logg-inn-or-register-button" 
+                    id="log-in-button"
+                >
+                    Lag Bruker
+                </button>
             </form>
-        </div>
-    </body>   
+        </main>
+    </body>
 </html>
