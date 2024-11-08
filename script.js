@@ -138,6 +138,30 @@ document.addEventListener("DOMContentLoaded", function() {
     fridayButton.addEventListener("click", () => {
         setGraph(5);
     })
+
+    // Utlånskode
+
+    document.getElementById('reservation-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const equipment = document.getElementById('equipment').value;
+        const name = document.getElementById('name').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+
+        const tableBody = document.querySelector('#reservations-table tbody');
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td>${equipment}</td>
+            <td>${name}</td>
+            <td>${date}</td>
+            <td>${time}</td>
+        `;
+        tableBody.appendChild(newRow);
+
+        // Tøm skjemaet etter reservasjon
+        document.getElementById('reservation-form').reset();
+    });
 });
 
 if (table) {

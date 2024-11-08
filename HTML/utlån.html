@@ -1,17 +1,38 @@
 <!DOCTYPE html>
+
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Utlån</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
+    <title>Utlån av utstyr - HvL</title>
 </head>
 <body>
     <header>
-        <h1>Utlån av Utstyr</h1>
-    </header>
+        <a href="../index.html">
+            <img class="hvl-logo" src="../media/hvl_logo.svg" alt="HvL sin logo">
+        </a>
 
-    <main>
+        <ul class="log-in-and-register">
+            <li><a href="logg_inn.html">Logg Inn</a></li>
+            <li><a href="lag_bruker.html">Lag Bruker</a></li>
+        </ul>
+    </header>
+    <nav class="drop-down">
+        <button class="drop-down-button"><strong>Navigasjon</strong><img src="../media/drop_down_button_black.svg" alt="Vis/skjul navigasjonsmeny"></button>
+        <ul class="drop-down-content">
+            <li><a href="../index.html">Hjem</a></li>
+            <li><a href="om_laeringslabbene.html">Om læringslabbene</a></li>
+            <li><a href="loesninger_resultat_og_virkning.html">Løsninger, resultat og virkning</a></li>
+            <li><a href="baerekraft_og_samfunnsansvar.html">Bærekraft og samfunnsansvar</a></li>
+            <li><a href="kontakt.html">Kontakt og sammarbeid</a></li>
+            <li><a href="travle_og_ledige_tider.html">Travle og Ledige Tider</a></li>
+            <li class="current-page"><strong>Utlån av utstyr</strong></li>
+        </ul>
+    </nav>
+
+    <main class="content-body">
         <section>
             <h2>Reserver Utstyr</h2>
             <form id="reservation-form">
@@ -55,28 +76,6 @@
         </section>
     </main>
 
-    <script>
-        document.getElementById('reservation-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const equipment = document.getElementById('equipment').value;
-            const name = document.getElementById('name').value;
-            const date = document.getElementById('date').value;
-            const time = document.getElementById('time').value;
-
-            const tableBody = document.querySelector('#reservations-table tbody');
-            const newRow = document.createElement('tr');
-            newRow.innerHTML = `
-                <td>${equipment}</td>
-                <td>${name}</td>
-                <td>${date}</td>
-                <td>${time}</td>
-            `;
-            tableBody.appendChild(newRow);
-
-            // Tøm skjemaet etter reservasjon
-            document.getElementById('reservation-form').reset();
-        });
-    </script>
+    <script src="../script.js"></script>
 </body>
 </html>
