@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Utlån</title>
+</head>
+<body>
+    <header>
+        <h1>Utlån av Utstyr</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Reserver Utstyr</h2>
+            <form id="reservation-form">
+                <label for="equipment">Velg utstyr:</label>
+                <select id="equipment" name="equipment" required>
+                    <option value="">--Velg utstyr--</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="projektor">Projektor</option>
+                    <option value="kamera">Kamera</option>
+                    <option value="mikrofon">Mikrofon</option>
+                </select>
+
+                <label for="name">Navn:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="date">Dato:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Tid:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Reserver</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Reservasjoner</h2>
+            <table id="reservations-table">
+                <thead>
+                    <tr>
+                        <th>Utstyr</th>
+                        <th>Navn</th>
+                        <th>Dato</th>
+                        <th>Tid</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Reservasjoner vil bli lagt til her -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('reservation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const equipment = document.getElementById('equipment').value;
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            const tableBody = document.querySelector('#reservations-table tbody');
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${equipment}</td>
+                <td>${name}</td>
+                <td>${date}</td>
+                <td>${time}</td>
+            `;
+            tableBody.appendChild(newRow);
+
+            // Tøm skjemaet etter reservasjon
+            document.getElementById('reservation-form').reset();
+        });
+    </script>
+</body>
+</html>
