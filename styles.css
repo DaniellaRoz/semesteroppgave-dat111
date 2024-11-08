@@ -28,7 +28,7 @@ h2 {
     scroll-margin-top: 100px;
 }
 
-button {
+button, select {
     font-family: inherit;
     cursor: pointer;
 }
@@ -295,7 +295,7 @@ td:first-child, th:first-child {
     align-items: center;
 }
 
-.text-field input {
+input, select {
     font-family: inherit;
     padding: 0.75rem;
     min-width: 200px;
@@ -312,7 +312,7 @@ td:first-child, th:first-child {
     color: #666;
 }
 
-.logg-inn-or-register-button {
+.logg-inn-or-register-button, .reserve-button {
     padding: 0.75rem 1.5rem;
     min-height: 44px;
 }
@@ -340,4 +340,19 @@ td:first-child, th:first-child {
 .button-container button.unclickable {
     cursor: not-allowed;
     background-color: #F5F5F5;
+}
+
+.reservation-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reservation-item label {
+    font-size: 18px;
+}
+
+.reserve-button {
+    margin: 20px;
 }

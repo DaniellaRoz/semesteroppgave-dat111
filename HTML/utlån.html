@@ -36,25 +36,35 @@
         <section>
             <h2>Reserver Utstyr</h2>
             <form id="reservation-form">
-                <label for="equipment">Velg utstyr:</label>
-                <select id="equipment" name="equipment" required>
-                    <option value="">--Velg utstyr--</option>
-                    <option value="laptop">Laptop</option>
-                    <option value="projektor">Projektor</option>
-                    <option value="kamera">Kamera</option>
-                    <option value="mikrofon">Mikrofon</option>
-                </select>
+                <div class="reservation-item">
+                    <label for="equipment">Velg utstyr:</label>
+                    <select id="equipment" name="equipment" required>
+                        <option value="">--Velg utstyr--</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="projektor">Projektor</option>
+                        <option value="kamera">Kamera</option>
+                        <option value="mikrofon">Mikrofon</option>
+                    </select>
+                </div>
 
-                <label for="name">Navn:</label>
-                <input type="text" id="name" name="name" required>
+                <div class="reservation-item">
+                    <label for="name">Navn:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-                <label for="date">Dato:</label>
-                <input type="date" id="date" name="date" required>
+                <div class="reservation-item">
+                    <label for="date">Dato:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
 
-                <label for="time">Tid:</label>
-                <input type="time" id="time" name="time" required>
+                <div class="reservation-item">
+                    <label for="time">Tid:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
 
-                <button type="submit">Reserver</button>
+                <div class="reservation-item">
+                    <button class="reserve-button" type="submit">Reserver</button>
+                </div>
             </form>
         </section>
 
