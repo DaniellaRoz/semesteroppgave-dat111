@@ -1,5 +1,13 @@
 const table = document.getElementById("opening-times-table");
 
+let recommendedTimesArray = [
+    "9:00 og 17:00 til 18:00",
+    "9:00, 13:00 og 17:00 til 18:00",
+    "9:00 og 18:00",
+    "9:00, 13:00 og 18:00",
+    "9:00 og 17:00 til 18:00"
+]
+
 document.addEventListener("DOMContentLoaded", function() {
     let toggled = false;
 
@@ -72,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const wednesdayButton = document.getElementById("wednesday-button");
     const thursdayButton = document.getElementById("thursday-button");
     const fridayButton = document.getElementById("friday-button");
+    const recommendedTimes = document.getElementById("recommended-times");
 
     function resetButtons() {
         mondayButton.classList.remove("unclickable");
@@ -86,30 +95,35 @@ document.addEventListener("DOMContentLoaded", function() {
             case 2: // Tuesday
                 visitorGraph.src = "../besokstall_Tirsdag.png";
                 visitorGraph.alt = "graf over besøkstall på tirsdag";
+                recommendedTimes.textContent = recommendedTimesArray[1];
                 resetButtons();
                 tuesdayButton.classList.add("unclickable");
                 break;
             case 3: // Wednesday
                 visitorGraph.src = "../besokstall_Onsdag.png";
                 visitorGraph.alt = "graf over besøkstall på onsdag";
+                recommendedTimes.textContent = recommendedTimesArray[2];
                 resetButtons();
                 wednesdayButton.classList.add("unclickable");
                 break;
             case 4: // Thursday
                 visitorGraph.src = "../besokstall_Torsdag.png";
                 visitorGraph.alt = "graf over besøkstall på torsdag";
+                recommendedTimes.textContent = recommendedTimesArray[3];
                 resetButtons();
                 thursdayButton.classList.add("unclickable");
                 break;
             case 5: // Friday
                 visitorGraph.src = "../besokstall_Fredag.png";
                 visitorGraph.alt = "graf over besøkstall på fredag";
+                recommendedTimes.textContent = recommendedTimesArray[4];
                 resetButtons();
                 fridayButton.classList.add("unclickable");
                 break;
             default: // Monday, Saturday and Sunday and any exception will be treated as Monday.
                 visitorGraph.src = "../besokstall_Mandag.png";
-                visitorGraph.alt = "graf over besøkstall på mandag"
+                visitorGraph.alt = "graf over besøkstall på mandag";
+                recommendedTimes.textContent = recommendedTimesArray[0];
                 resetButtons();
                 mondayButton.classList.add("unclickable");
                 break;
