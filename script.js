@@ -36,12 +36,15 @@ document.addEventListener("DOMContentLoaded", function() {
         toggled ? dropDownButton.style.top = `${contentHeight + 90}px` : dropDownButton.style.top = `${90}px`
     }
     
-    dropDownButton.addEventListener("click", function() {
-        toggled = !toggled;
-        dropDownContent.classList.toggle("show");
-        dropDownButton.classList.toggle("rotate");
-        adjustButtonPosition();
-    });
+    if (dropDownButton) {
+        dropDownButton.addEventListener("click", function() {
+            toggled = !toggled;
+            dropDownContent.classList.toggle("show");
+            dropDownButton.classList.toggle("rotate");
+            adjustButtonPosition();
+        });
+    }
+
     if (bergenButton) {
         bergenButton.addEventListener("click", function() {
             bergenContent.classList.toggle("show");
